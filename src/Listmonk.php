@@ -84,4 +84,5 @@ class Listmonk
     {
         return $this->client->request('POST', '/api/subscribers', $data);
     }
+
 }

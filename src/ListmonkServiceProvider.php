@@ -33,7 +33,7 @@ class ListmonkServiceProvider extends ServiceProvider
     }
 
     public function boot()
-    {dump(__DIR__ . '/../config/listmonk.php');
+    {
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/listmonk.php' => config_path('listmonk.php'),
