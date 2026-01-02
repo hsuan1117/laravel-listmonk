@@ -1,0 +1,21 @@
+{
+    "name": "hsuan/laravel-listmonk",
+    "description": "A package for listmonk marketing server management",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/http": "^8.0|^9.0|^10.0|^11.0|^12.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hsuan\\Listmonk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hsuan",
+            "email": "34859514+hsuan1117@users.noreply.github.com"
+        }
+    ]
+}
