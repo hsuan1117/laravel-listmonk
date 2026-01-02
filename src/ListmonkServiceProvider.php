@@ -10,7 +10,10 @@ class ListmonkServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/listmonk.php', 'listmonk');
+        $path = __DIR__ . '/../config/listmonk.php';
+        if (file_exists($path)) {
+            $this->mergeConfigFrom($path, 'listmonk');
+        }
 
         $this->app->scoped(Client::class, function ($app) {
             $config = $app['config']['listmonk'];
@@ -30,7 +33,7 @@ class ListmonkServiceProvider extends ServiceProvider
     }
 
     public function boot()
-    {
+    {dump(__DIR__ . '/../config/listmonk.php');
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/listmonk.php' => config_path('listmonk.php'),

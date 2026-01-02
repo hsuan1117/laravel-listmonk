@@ -12,6 +12,13 @@
             "Hsuan\\Listmonk\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hsuan\\Listmonk\\ListmonkServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "Hsuan",
